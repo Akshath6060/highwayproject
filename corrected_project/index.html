@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriveTrackerorg</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">DriveTracker</div>
+               <ul class="nav-links">
+    <li><a href="#speed">Speed</a></li>
+    <li><a href="#traffic">Traffic</a></li>
+    <li><a href="#rewards">Rewards</a></li>
+    <li><a href="#map">Map</a></li>
+    <li><a href="login.html">Login</a></li>
+    <li><a href="signup.html">Sign Up</a></li>
+</ul>
+                <button class="hamburger" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Smart Driving<br>Smart Rewards</h1>
+                <p>Track your journey, earn rewards, and drive smarter with our advanced tracking system.</p>
+            </div>
+        </section>
+
+        <!-- Speed Section -->
+        <section id="speed" class="container">
+            <div class="card">
+                <h2>Current Speed</h2>
+                <div class="speed-display">
+                    <div class="speed-value">45</div>
+                    <div class="speed-unit">MPH</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Traffic & Rewards Grid -->
+        <section class="container grid-section">
+            <div class="grid">
+                <div id="traffic" class="card dark">
+                    <div class="card-header">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M19 17h2l.64-2.54c.24-.959.24-1.962 0-2.92l-1.07-4.27A3 3 0 0 0 17.66 5H4a2 2 0 0 0-2 2v10h2m14 0h-5m5 0a3 3 0 1 1-6 0m6 0a3 3 0 1 0-6 0m-5 0H4m0 0a3 3 0 1 1 6 0m-6 0a3 3 0 1 0 6 0m0 0h2"/>
+                        </svg>
+                        <h2>Traffic Updates</h2>
+                    </div>
+                    <div class="traffic-content">
+                        <div class="traffic-status">
+                            <h3>Current Traffic Status</h3>
+                            <p class="status-text">Moderate traffic on main routes</p>
+                        </div>
+                        
+                        <div class="hazard-reporting">
+                            <h3>Report a Hazard</h3>
+                            <div class="hazard-buttons">
+                                <button class="hazard-btn" data-hazard="pothole">
+                                    <svg class="hazard-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <path d="M8 12h8"/>
+                                    </svg>
+                                    Pothole
+                                </button>
+                                <button class="hazard-btn" data-hazard="accident">
+                                    <svg class="hazard-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                                    </svg>
+                                    Accident
+                                </button>
+                                <button class="hazard-btn" data-hazard="roadwork">
+                                    <svg class="hazard-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 2l10 10-10 10-10-10L12 2z"/>
+                                    </svg>
+                                    Roadwork
+                                </button>
+                                <button class="hazard-btn" data-hazard="traffic">
+                                    <svg class="hazard-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                                    </svg>
+                                    Traffic Block
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="recent-reports">
+                            <h3>Recent Reports</h3>
+                            <div class="reports-list" id="recentReports">
+                                <!-- Reports will be added here dynamically -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="rewards" class="card dark">
+                    <div class="card-header">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 15a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z"/>
+                            <path d="m8.21 13.89-3.68 3.68a2 2 0 0 0-.56 1.32L4 20.8l1.91-.03a2 2 0 0 0 1.32-.56l3.68-3.68"/>
+                            <path d="m15.79 13.89 3.68 3.68a2 2 0 0 1 .56 1.32L20 20.8l-1.91-.03a2 2 0 0 1-1.32-.56l-3.68-3.68"/>
+                        </svg>
+                        <h2>Rewards Status</h2>
+                    </div>
+                    <div class="rewards-content">
+                        <div class="rewards-summary">
+                            <div class="rewards-total">
+                                <span class="points">2,450</span>
+                                <span class="label">Total Points</span>
+                            </div>
+                            <div class="rewards-level">
+                                <span class="level">Gold</span>
+                                <span class="label">Current Level</span>
+                            </div>
+                        </div>
+                        
+                        <div class="rewards-progress">
+                            <div class="progress-label">
+                                <span>Progress to Platinum</span>
+                                <span>550 points to go</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 82%"></div>
+                            </div>
+                        </div>
+
+                        <div class="rewards-achievements">
+                            <h3>Recent Achievements</h3>
+                            <div class="achievement-list">
+                                <div class="achievement">
+                                    <svg class="achievement-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"/>
+                                        <line x1="16" y1="8" x2="2" y2="22"/>
+                                        <line x1="17.5" y1="15" x2="9" y2="15"/>
+                                    </svg>
+                                    <div class="achievement-details">
+                                        <h4>Smooth Operator</h4>
+                                        <p>Maintained optimal speed for 2 hours</p>
+                                    </div>
+                                    <span class="points-badge">+100</span>
+                                </div>
+                                <div class="achievement">
+                                    <svg class="achievement-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                                    </svg>
+                                    <div class="achievement-details">
+                                        <h4>Fuel Saver</h4>
+                                        <p>20% better fuel efficiency this week</p>
+                                    </div>
+                                    <span class="points-badge">+150</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="rewards-available">
+                            <h3>Available Rewards</h3>
+                            <div class="rewards-grid">
+                                <div class="reward-card">
+                                    <div class="reward-icon">🛟</div>
+                                    <h4>Free Car Wash</h4>
+                                    <p>500 points</p>
+                                    <button class="redeem-btn">Redeem</button>
+                                </div>
+                                <div class="reward-card">
+                                    <div class="reward-icon">⛽</div>
+                                    <h4>$10 Gas Card</h4>
+                                    <p>1000 points</p>
+                                    <button class="redeem-btn">Redeem</button>
+                                </div>
+                                <div class="reward-card">
+                                    <div class="reward-icon">🔧</div>
+                                    <h4>Oil Change</h4>
+                                    <p>2000 points</p>
+                                    <button class="redeem-btn">Redeem</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section id="map" class="container">
+            <div class="card">
+                <div class="card-header">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                        <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                    <h2>Location Map</h2>
+                </div>
+                <div class="map-placeholder">
+                    <p>Map Interface</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 DriveTracker. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js">
+        </script>
+</body>
+</html>
